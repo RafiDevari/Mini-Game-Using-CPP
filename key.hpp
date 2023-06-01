@@ -11,12 +11,15 @@ int yf=5;
 int lebar =50;
 int tinggi=25;
 int score=0;
+char key='d';
+int delay=10;
 
 
 
 void batas(){
     if (xp>=lebar-1){
         xp=lebar-1;
+        
     }
     if (yp>=tinggi-1){
         yp=tinggi-1;
@@ -38,11 +41,15 @@ void batas(){
 
 
 void presskey(){
-    
-        
-            char key = _getch();
+            
+            while (_kbhit()) {
+                key=getch();
+            }
+
+
             if (key == 'w' || key == 'W'){
                 yp=yp-1;
+                
                 batas();
             }
 
@@ -51,15 +58,16 @@ void presskey(){
                 batas();
             }
 
-            if (key == 's' || key == 'S'){
+            else if (key == 's' || key == 'S'){
                 yp=yp+1;
                 batas();
             }
 
-            if (key == 'd' || key == 'D'){
+            else if (key == 'd' || key == 'D'){
                 xp=xp+1;
                 batas();
             }
+            
         
 
 }
