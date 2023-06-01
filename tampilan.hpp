@@ -1,15 +1,12 @@
-#include "key.hpp"
+#include "object.hpp"
 
 void map(){
     for (int i = 0; i < tinggi; i++){
         for (int j = 0; j < lebar; j++){
-            if (i==y && j==x){
-                cout<<"*"; 
-            }
-            else cout<<" ";
-            
+            player(i,j);
         }
         cout<<endl;
     }
+    cout<<"Score="<<score;
     
 }
