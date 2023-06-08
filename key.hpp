@@ -2,24 +2,24 @@
 #include <conio.h>
 #include <windows.h>
 #include <time.h>
+#include <vector>
 using namespace std;
 
 int xp=5;
 int yp=5;
 int xf=7;
 int yf=5;
+vector<int> xt;
+vector<int> yt;
 int lebar =50;
 int tinggi=25;
 int score=0;
 char key='d';
-int delay=10;
-
-
+int delay=50;
 
 void batas(){
     if (xp>=lebar-1){
-        xp=lebar-1;
-        
+        xp=lebar-1;    
     }
     if (yp>=tinggi-1){
         yp=tinggi-1;
